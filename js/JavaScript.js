@@ -2,13 +2,12 @@
 * @Author: 吕计宏
 * @Date:   2020-12-10 10:22:41
 * @Last Modified by:   吕计宏
-* @Last Modified time: 2020-12-14 16:15:00
+* @Last Modified time: 2020-12-14 20:51:23
 */
 
 // 登陆界面
 var welcome = document.createElement("p");
-// console.log(document.getElementsByClassName("form1")[0].appendChild(welcome));
-document.getElementById("login").onclick = function(){
+document.getElementById("login1").onclick = function(){
 	if (document.getElementById("oldAccount").value && document.getElementById("oldPassword").value) {
 		welcome.innerHTML = "欢迎登陆：" + document.getElementById("oldAccount").value + "!";
 		document.getElementsByClassName("container")[0].appendChild(welcome);
@@ -49,7 +48,7 @@ document.getElementById("password").onblur = function(){
 	}
 };	
 
-function success(){
+document.getElementById("login").onclick = function (){
 	var btn = document.createElement("button");
 	btn.innerHTML = "返回登陆";
 	btn.onclick = function(){
